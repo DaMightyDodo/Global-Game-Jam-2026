@@ -1,22 +1,19 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
     [Header("References")]
     private CharacterController _controller;
-
-    [Header("Movement")]
-    [SerializeField] private float _walkSpeed = 5f;
-    [SerializeField] private float _gravity = 9.81f;
-    [SerializeField] private float _jumpHeight = 2f;
-    [SerializeField] private float _sprintSpeed = 5f;
+    [SerializeField] private PlayerScriptable _stat;
     private float _verticalVelocity;
+
     [Header("Input")]
     private float _moveInput;
     private float _turnInput;
-    private bool _jumpInput;
+    private bool _jumpRequested;
+    private float _lastJumpPressedTime;
+
     private void Start()
     {
         _controller = GetComponent<CharacterController>();
@@ -24,19 +21,16 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        Movement();
-    }
-
-    private void Movement()
-    {
         GroundMovement();
     }
 
     private void GroundMovement()
     {
         Vector3 move = new Vector3(_turnInput, 0, _moveInput);
-        move *= _walkSpeed;
+        move *= _stat.walkSpeed;
+
         move.y = VerticalForceCalculation();
+
         _controller.Move(move * Time.deltaTime);
     }
 
@@ -44,20 +38,26 @@ public class PlayerController : MonoBehaviour
     {
         if (_controller.isGrounded)
         {
-            _verticalVelocity = -1f;
+            // Keep grounded
+            if (_verticalVelocity < 0)
+                _verticalVelocity = -2f;
 
-            if (_jumpInput)
+            // Jump buffering
+            if (_jumpRequested && Time.time < _lastJumpPressedTime + _stat.jumpBufferTime)
             {
-                _verticalVelocity = Mathf.Sqrt(_jumpHeight * _gravity * 2);
-                _jumpInput = false;
+                _verticalVelocity = Mathf.Sqrt(_stat.jumpHeight * 2f * _stat.gravity);
+                _jumpRequested = false;
             }
         }
         else
         {
-            _verticalVelocity -= _gravity * Time.deltaTime;
+            // Gravity
+            _verticalVelocity -= _stat.gravity * Time.deltaTime;
         }
+
         return _verticalVelocity;
     }
+
     private void OnMove(InputValue value)
     {
         Vector2 input = value.Get<Vector2>();
@@ -67,9 +67,10 @@ public class PlayerController : MonoBehaviour
 
     private void OnJump(InputValue value)
     {
-        if (value.isPressed && _controller.isGrounded)
+        if (value.isPressed)
         {
-            _jumpInput = true;
+            _jumpRequested = true;
+            _lastJumpPressedTime = Time.time;
         }
     }
 }
