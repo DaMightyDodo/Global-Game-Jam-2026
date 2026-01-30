@@ -5,5 +5,6 @@ public class EnemyStatsSO : ScriptableObject
 {
     public float sightRange, attackRange;
     public float timeBetweenAttacks;
+    public float walkPointRange;
 
 }
