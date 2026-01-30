@@ -15,4 +15,4 @@ MonoBehaviour:
   walkSpeed: 5
   gravity: 9.81
   jumpHeight: 2
-  jumpBufferTime: 0.1
+  jumpBufferTime: 0.22
