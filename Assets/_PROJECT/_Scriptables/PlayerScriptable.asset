@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60b932b4a26248e48a333b95e762dd5c, type: 3}
   m_Name: PlayerScriptable
   m_EditorClassIdentifier: 
-  walkSpeed: 5
+  walkSpeed: 6
+  turnSpeed: 360
   gravity: 9.81
-  jumpHeight: 2
-  jumpBufferTime: 0.1
+  gravityMultiplier: 3.3
+  jumpHeight: 3
+  jumpBufferTime: 0.22

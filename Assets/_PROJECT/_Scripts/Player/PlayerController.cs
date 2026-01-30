@@ -22,6 +22,7 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         GroundMovement();
+        FaceMovementDirection();
     }
 
     private void GroundMovement()
@@ -45,17 +46,31 @@ public class PlayerController : MonoBehaviour
             // Jump buffering
             if (_jumpRequested && Time.time < _lastJumpPressedTime + _stat.jumpBufferTime)
             {
-                _verticalVelocity = Mathf.Sqrt(_stat.jumpHeight * 2f * _stat.gravity);
+                _verticalVelocity = Mathf.Sqrt(_stat.jumpHeight * 2f * _stat.gravity * _stat.gravityMultiplier);
                 _jumpRequested = false;
             }
         }
         else
         {
             // Gravity
-            _verticalVelocity -= _stat.gravity * Time.deltaTime;
+            _verticalVelocity -= _stat.gravity *_stat.gravityMultiplier * Time.deltaTime;
         }
 
         return _verticalVelocity;
+    }
+    private void FaceMovementDirection()
+    {
+        Vector3 direction = new Vector3(_turnInput, 0f, _moveInput);
+
+        if (direction.sqrMagnitude < 0.001f)
+            return;
+
+        Quaternion targetRotation = Quaternion.LookRotation(direction, Vector3.up);
+        transform.rotation = Quaternion.RotateTowards(
+            transform.rotation,
+            targetRotation,
+            _stat.turnSpeed * Time.deltaTime
+        );
     }
 
     private void OnMove(InputValue value)
