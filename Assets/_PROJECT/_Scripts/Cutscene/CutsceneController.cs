@@ -21,6 +21,7 @@ public class CutsceneController : MonoBehaviour
 
     private void PlayCutscene()
     {
+        Debug.Log("Cutscene Started");
         director.Play();
     }
 

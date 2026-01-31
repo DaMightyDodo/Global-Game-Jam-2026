@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1dfbfa3c-a519-4c8a-a46c-e5f0f652a5ac" name="Changes" comment="" />
+    <list default="true" id="1dfbfa3c-a519-4c8a-a46c-e5f0f652a5ac" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Global Game Jam 2026/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Global Game Jam 2026/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_PROJECT/Scenes/StartScreen Test Dodo.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_PROJECT/Scenes/StartScreen Test Dodo.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_PROJECT/_Models/Peridot Models/StartMenuIdleController.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_PROJECT/_Models/Peridot Models/StartMenuIdleController.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_PROJECT/_Scripts/Cutscene/CutsceneController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_PROJECT/_Scripts/Cutscene/CutsceneController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TimelineSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TimelineSettings.asset" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
