@@ -11,15 +11,15 @@ public class EnemyAI_Police : EnemyAI
         agent.enabled = false;
         policeBody.isKinematic = false;
         policeBody.AddForce(transform.forward * 32f, ForceMode.Impulse);
-        StartCoroutine(Recover());
-
         Debug.Log("Police Attacks!");
+        StartCoroutine(Recover());
     }
 
     private IEnumerator Recover()
     {
         yield return new WaitUntil(() => policeBody.linearVelocity.magnitude < 0.1f);
         agent.enabled = true;
-        policeBody.isKinematic = true;
+        //policeBody.isKinematic = true;
+        Debug.Log("Police Recovers!");
     }
 }

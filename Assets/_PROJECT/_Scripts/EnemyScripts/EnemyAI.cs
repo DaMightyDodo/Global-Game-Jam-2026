@@ -40,17 +40,20 @@ abstract public class EnemyAI : MonoBehaviour
         playerInSightRange = Physics.CheckSphere(transform.position, enemyStats.sightRange, whatIsPlayer);
         playerInAttackRange = Physics.CheckSphere(transform.position, enemyStats.attackRange, whatIsPlayer);
 
-        if (playerInAttackRange)
+        if (agent.enabled == true)
         {
-            AttackPlayer();
-        }
-        else if (playerInSightRange)
-        {
-            ChasePlayer();
-        }
-        else
-        {
-            Patroling();
+            if (playerInAttackRange)
+            {
+                AttackPlayer();
+            }
+            else if (playerInSightRange)
+            {
+                ChasePlayer();
+            }
+            else
+            {
+               Patroling();
+            }
         }
     }
 
