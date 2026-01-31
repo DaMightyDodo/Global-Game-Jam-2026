@@ -20,6 +20,8 @@ public class Shootingbase : MonoBehaviour
     private bool CanShoot;
     private float timeRemaining;
     
+    //gizmo only
+    private Vector3 debugMouseWorldPosition;
     void Awake()
     {
         actions = new InputSystem_Actions();
@@ -70,17 +72,19 @@ public class Shootingbase : MonoBehaviour
         // This allows the mouse to "aim" up, down, left, and right relative to the screen.
         Plane aimPlane = new Plane(-mainCam.transform.forward, transform.position);
 
+        //Check out Code Monkey's video (about minute 6:00) : https://www.youtube.com/watch?v=0jTPKz3ga4w
         if (aimPlane.Raycast(ray, out float distance))
         {
             // 3. Find where the mouse hits that 3D plane
             Vector3 worldMousePos = ray.GetPoint(distance);
-
+            debugMouseWorldPosition = worldMousePos;
             // 4. Calculate the direction from player to the mouse point
             Vector3 direction = worldMousePos - transform.position;
 
             // 5. Point the rotatePoint at that position
             // This handles all axes (X, Y, and Z) automatically
-            if (direction != Vector3.zero)
+            Debug.Log(direction.magnitude);
+            if (direction.magnitude > 2.4f)
             {
                 rotatePoint.rotation = Quaternion.LookRotation(direction);
             }
@@ -111,5 +115,22 @@ public class Shootingbase : MonoBehaviour
                 rb.linearVelocity = rotatePoint.forward * _sobulletStatistics.speed;
             }
         }
+    }
+
+    //Only exist to see in the world, Can delete
+    private void OnDrawGizmos()
+    {
+        if (rotatePoint != null)
+        {
+            // Draw a Red line from player to the mouse point
+            Gizmos.color = Color.red;
+            Gizmos.DrawLine(transform.position, rotatePoint.position);
+            
+            //// Draw a Yellow sphere where the mouse is "touching" the world
+            Gizmos.color = Color.yellow;
+            Gizmos.DrawWireSphere(debugMouseWorldPosition, 1f);
+            
+            
+        } 
     }
 }
