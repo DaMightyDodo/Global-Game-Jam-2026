@@ -65,6 +65,6 @@ public class StartMenuManager : MonoBehaviour
     private void PlayTransitionCutscene()
     {
         Debug.Log("Play Transition");
-        SceneManager.LoadScene("MainGameplay Dodo");
+
     }
 }
