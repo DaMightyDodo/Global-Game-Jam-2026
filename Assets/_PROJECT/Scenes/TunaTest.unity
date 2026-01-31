@@ -336,6 +336,7 @@ MonoBehaviour:
   walkPoint: {x: 0, y: 0, z: 0}
   walkPointSet: 0
   groundCheck: {fileID: 1003472812}
+  germ: {fileID: 5457477623235205665, guid: d543c69d29b7fe542a7a14d2435f176b, type: 3}
 --- !u!1 &590041780
 GameObject:
   m_ObjectHideFlags: 0
