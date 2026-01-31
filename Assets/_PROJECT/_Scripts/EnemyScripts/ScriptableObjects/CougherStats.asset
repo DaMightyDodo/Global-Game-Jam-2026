@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3ca7010370a9684f97d9161670f1b7c, type: 3}
   m_Name: CougherStats
   m_EditorClassIdentifier: 
-  sightRange: 20
-  attackRange: 12
+  sightRange: 18.6
+  attackRange: 9.6
   timeBetweenAttacks: 3
-  walkPointRange: 10
+  walkPointRange: 9.92
