@@ -2286,7 +2286,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ba686f0ebcfe2840a5c180a872864b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _pauseUI: {fileID: 0}
+  _pauseUI: {fileID: 682479837}
+  _player: {fileID: 590041786}
+  _startScreen: StartScreen Test Dodo
 --- !u!4 &1119860857
 Transform:
   m_ObjectHideFlags: 0
@@ -2296,7 +2298,7 @@ Transform:
   m_GameObject: {fileID: 1119860855}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -122.9961, y: -63.423203, z: -26.961409}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
