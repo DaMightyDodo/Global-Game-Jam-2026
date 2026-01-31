@@ -1,19 +1,17 @@
 using System;
-using UnityEditor.SearchService;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class StartMenuManager : MonoBehaviour
 {
     public static event Action OnControlMenuOpened;
     public static event Action OnReturnedToTitle;
+    public static event Action OnStartGameRequested;
 
     [SerializeField] private StartMenuButtons _startUI;
     [SerializeField] private GameObject _backButton;
 
     private void Awake()
     {
-        // Back button hidden at start
         _backButton.SetActive(false);
     }
 
@@ -43,18 +41,14 @@ public class StartMenuManager : MonoBehaviour
     {
         _startUI.gameObject.SetActive(false);
         _backButton.SetActive(true);
-
         OnControlMenuOpened?.Invoke();
-        Debug.Log("Open Controls Menu");
     }
 
     private void HandleBackClicked()
     {
         _startUI.gameObject.SetActive(true);
         _backButton.SetActive(false);
-
         OnReturnedToTitle?.Invoke();
-        Debug.Log("Return to Title");
     }
 
     private void HandleQuitClicked()
@@ -64,7 +58,7 @@ public class StartMenuManager : MonoBehaviour
 
     private void PlayTransitionCutscene()
     {
-        Debug.Log("Play Transition");
-
+        Debug.Log("Request Transition Cutscene");
+        OnStartGameRequested?.Invoke();
     }
 }
