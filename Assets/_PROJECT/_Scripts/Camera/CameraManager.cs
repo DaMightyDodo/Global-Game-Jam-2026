@@ -15,6 +15,19 @@ public class CameraManager : MonoBehaviour
         EnableOnly(_currentCamera);
     }
 
+    private void OnEnable()
+    {
+        StartMenuManager.OnControlMenuOpened += ShowControlCamera;
+        StartMenuManager.OnReturnedToTitle += ShowTitleCamera;
+    }
+
+    private void OnDisable()
+    {
+        StartMenuManager.OnControlMenuOpened -= ShowControlCamera;
+        StartMenuManager.OnReturnedToTitle -= ShowTitleCamera;
+    }
+
+
     public void ShowTitleCamera()
     {
         _currentCamera = titleCamera;

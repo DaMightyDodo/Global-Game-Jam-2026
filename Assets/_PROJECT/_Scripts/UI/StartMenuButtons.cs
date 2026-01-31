@@ -6,8 +6,9 @@ public class StartMenuButtons : MonoBehaviour
     public event Action OnClickStart;
     public event Action OnClickControl;
     public event Action OnClickQuit;
+    public event Action OnClickBack;
 
-    // Called by UI Button (Inspector)
+    // Called by UI Button
     public void ClickStart()
     {
         OnClickStart?.Invoke();
@@ -21,5 +22,10 @@ public class StartMenuButtons : MonoBehaviour
     public void ClickQuit()
     {
         OnClickQuit?.Invoke();
+    }
+
+    public void ClickBack()
+    {
+        OnClickBack?.Invoke();
     }
 }
