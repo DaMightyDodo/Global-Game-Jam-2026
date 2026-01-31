@@ -1,16 +1,23 @@
+using System;
 using UnityEngine;
 
 public class PauseMenuButtons : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public event Action OnClickResume;
+    public event Action OnClickRestart;
+    public event Action OnClickBacktoMenu;
+    public void ClickResume()
     {
-        
+        OnClickResume?.Invoke();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void ClickRestart()
     {
-        
+        OnClickRestart?.Invoke();
+    }
+
+    public void ClickBacktoMenu()
+    {
+        OnClickBacktoMenu?.Invoke();
     }
 }
