@@ -4,6 +4,9 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
+    [Header("Animation")]
+    [SerializeField] private Animator _animator;
+
     public event Action OnPauseClicked;
     public event Action OnInteractClicked;
     [Header("References")]
@@ -26,7 +29,17 @@ public class PlayerController : MonoBehaviour
     {
         GroundMovement();
         FaceMovementDirection();
+        UpdateAnimation();
     }
+    private void UpdateAnimation()
+    {
+        Vector2 moveInput = new Vector2(_turnInput, _moveInput);
+
+        bool isWalking = moveInput.sqrMagnitude > 0.01f;
+
+        _animator.SetBool("isWalking", isWalking);
+    }
+
 
     private void GroundMovement()
     {

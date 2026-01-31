@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1dfbfa3c-a519-4c8a-a46c-e5f0f652a5ac" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Global Game Jam 2026/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Global Game Jam 2026/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_PROJECT/Scenes/MainGameplay Dodo.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_PROJECT/Scenes/MainGameplay Dodo.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_PROJECT/_Models/Peridot Models/anim/mask-gustave-ninja-mode-idle-NEW (1).controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_PROJECT/_Models/Peridot Models/anim/mask-gustave-ninja-mode-idle-NEW (1).controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_PROJECT/_Models/Peridot Models/rig.003_rig.003Action.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_PROJECT/_Models/Peridot Models/rig.003_rig.003Action.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_PROJECT/_Scripts/Player/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_PROJECT/_Scripts/Player/PlayerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_PROJECT/_Scripts/Player/PlayerDie.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_PROJECT/_Scripts/Player/PlayerDie.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_PROJECT/_Scripts/UI/GameOverManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_PROJECT/_Scripts/UI/GameOverManager.cs" afterDir="false" />
-    </list>
+    <list default="true" id="1dfbfa3c-a519-4c8a-a46c-e5f0f652a5ac" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
