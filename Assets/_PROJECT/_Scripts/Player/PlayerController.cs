@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour
 {
     public event Action OnPauseClicked;
-    
+    public event Action OnInteractClicked;
     [Header("References")]
     private CharacterController _controller;
     [SerializeField] private PlayerScriptable _stat;
@@ -98,5 +98,12 @@ public class PlayerController : MonoBehaviour
         {
             OnPauseClicked?.Invoke();
         }
+    }
+    private void OnInteract(InputValue value)
+    {
+        if (!value.isPressed)
+            return;
+
+        OnInteractClicked?.Invoke();
     }
 }

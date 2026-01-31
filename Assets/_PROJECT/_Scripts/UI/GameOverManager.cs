@@ -2,15 +2,27 @@ using UnityEngine;
 
 public class GameOverManager : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    [SerializeField] private GameObject gameOverUI;
+
+    private void Awake()
     {
-        
+        if (gameOverUI != null)
+            gameOverUI.SetActive(false);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnEnable()
     {
-        
+        PlayerDie.OnPlayerDie += HandlePlayerDie;
+    }
+
+    private void OnDisable()
+    {
+        PlayerDie.OnPlayerDie -= HandlePlayerDie;
+    }
+
+    private void HandlePlayerDie()
+    {
+        if (gameOverUI != null)
+            gameOverUI.SetActive(true);
     }
 }
