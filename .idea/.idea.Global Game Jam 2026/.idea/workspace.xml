@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1dfbfa3c-a519-4c8a-a46c-e5f0f652a5ac" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/_PROJECT/Cutscenes/Cutscene_Start.playable" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_PROJECT/Cutscenes/Cutscene_Start.playable" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_PROJECT/Scenes/StartScreen Test Dodo.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_PROJECT/Scenes/StartScreen Test Dodo.unity" afterDir="false" />
-    </list>
+    <list default="true" id="1dfbfa3c-a519-4c8a-a46c-e5f0f652a5ac" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
