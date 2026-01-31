@@ -40,17 +40,28 @@ abstract public class EnemyAI : MonoBehaviour
         playerInSightRange = Physics.CheckSphere(transform.position, enemyStats.sightRange, whatIsPlayer);
         playerInAttackRange = Physics.CheckSphere(transform.position, enemyStats.attackRange, whatIsPlayer);
 
-        if (playerInAttackRange)
+        if (agent.enabled == true)
         {
-            AttackPlayer();
+            if (playerInAttackRange)
+            {
+                AttackPlayer();
+            }
+            else if (playerInSightRange)
+            {
+                ChasePlayer();
+            }
+            else
+            {
+               Patroling();
+            }
         }
-        else if (playerInSightRange)
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Mask"))
         {
-            ChasePlayer();
-        }
-        else
-        {
-            Patroling();
+            OnMasked();
         }
     }
 
@@ -73,7 +84,7 @@ abstract public class EnemyAI : MonoBehaviour
         //Calculate random point in range
         float randomZ = Random.Range(-enemyStats.walkPointRange, enemyStats.walkPointRange);
         //float randomX = Random.Range(-enemyStats.walkPointRange, enemyStats.walkPointRange);
-        walkPoint = new Vector3(groundCheck.position.x, groundCheck.position.y, groundCheck.position.z + randomZ);
+        walkPoint = new Vector3(0, groundCheck.position.y, groundCheck.position.z + randomZ);
         if(Physics.Raycast(walkPoint, -transform.up, 2f, whatIsGround))
             walkPointSet = true;
     }
@@ -85,8 +96,6 @@ abstract public class EnemyAI : MonoBehaviour
 
     private void AttackPlayer()
     {
-        //Make sure enemy doesn't move
-        agent.SetDestination(transform.position);
         Vector3 targetPos = new Vector3(player.position.x, transform.position.y, player.position.z);
         transform.LookAt(targetPos);
 
@@ -106,8 +115,12 @@ abstract public class EnemyAI : MonoBehaviour
         alreadyAttacked = false;
     }
 
-    private void OnDestroy()
+    private void OnMasked()
     {
-        Destroy(gameObject);
+        GetComponent<EnemyAI>().enabled = false;
+
+        GetComponent<NavMeshAgent>().enabled = false;
+
+        GetComponent<Animator>().enabled = false;
     }
 }

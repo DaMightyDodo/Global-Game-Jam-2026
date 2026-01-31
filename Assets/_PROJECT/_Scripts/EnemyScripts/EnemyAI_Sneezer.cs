@@ -8,6 +8,8 @@ public class EnemyAI_Sneezer : EnemyAI
     public float SneezeSpread = 20f;
     public override void AttackAction()
     {
+        //Make sure enemy doesn't move
+        agent.SetDestination(transform.position);
         for (int i = 0; i < GermsPerSneeze; i++)
         {
             float angleStep = SneezeSpread / (GermsPerSneeze - 1);

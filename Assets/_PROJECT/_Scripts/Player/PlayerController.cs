@@ -1,8 +1,11 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
+    public event Action OnPauseClicked;
+    
     [Header("References")]
     private CharacterController _controller;
     [SerializeField] private PlayerScriptable _stat;
@@ -86,6 +89,14 @@ public class PlayerController : MonoBehaviour
         {
             _jumpRequested = true;
             _lastJumpPressedTime = Time.time;
+        }
+    }
+
+    private void OnPause(InputValue value)
+    {
+        if (value.isPressed)
+        {
+            OnPauseClicked?.Invoke();
         }
     }
 }

@@ -13,6 +13,7 @@ public class StartMenuManager : MonoBehaviour
     private void Awake()
     {
         _backButton.SetActive(false);
+        Time.timeScale = 1f;
     }
 
     private void OnEnable()
