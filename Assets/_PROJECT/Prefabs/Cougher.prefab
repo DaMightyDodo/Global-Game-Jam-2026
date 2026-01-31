@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7401257817660643663}
   - component: {fileID: 5075116778025446852}
   - component: {fileID: 6437500801578190363}
+  - component: {fileID: 1615379472335103395}
   m_Layer: 8
   m_Name: Cougher
   m_TagString: Untagged
@@ -61,7 +62,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 80
+  m_Constraints: 82
   m_CollisionDetection: 0
 --- !u!114 &5075116778025446852
 MonoBehaviour:
@@ -110,6 +111,29 @@ NavMeshAgent:
   m_BaseOffset: 3.8
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!136 &1615379472335103395
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1803725905338414963}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.6
+  m_Height: 5.5
+  m_Direction: 1
+  m_Center: {x: 0, y: -1, z: 0}
 --- !u!1 &8277600424359662268
 GameObject:
   m_ObjectHideFlags: 0
