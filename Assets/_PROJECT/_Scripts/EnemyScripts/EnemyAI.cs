@@ -11,7 +11,9 @@ abstract public class EnemyAI : MonoBehaviour
 
     //Patroling
     public Vector3 walkPoint;
-    bool walkPointSet;
+    [SerializeField] bool walkPointSet;
+    public Transform groundCheck;
+
 
     //Attacking
     bool alreadyAttacked;
@@ -56,23 +58,23 @@ abstract public class EnemyAI : MonoBehaviour
     {
         if (!walkPointSet) SearchWalkPoint();
 
-        if (walkPointSet)
+        else if (walkPointSet)
             agent.SetDestination(walkPoint);
 
-        Vector3 distanceToWalkpoint = transform.position - walkPoint;
+        Vector3 distanceToWalkpoint = groundCheck.position - walkPoint;
 
         //Walkpoint reached
-        if (distanceToWalkpoint.magnitude < 0.1f)
+        if (distanceToWalkpoint.magnitude < 1f)
             walkPointSet = false;
     }
 
     private void SearchWalkPoint()
     {
         //Calculate random point in range
-        //float randomZ = Random.Range(-enemyStats.walkPointRange, enemyStats.walkPointRange);
-        float randomX = Random.Range(-enemyStats.walkPointRange, enemyStats.walkPointRange);
-        walkPoint = new Vector3(transform.position.x + randomX, transform.position.y, transform.position.z);
-        if (Physics.Raycast(walkPoint, -transform.up, 2f, whatIsGround))
+        float randomZ = Random.Range(-enemyStats.walkPointRange, enemyStats.walkPointRange);
+        //float randomX = Random.Range(-enemyStats.walkPointRange, enemyStats.walkPointRange);
+        walkPoint = new Vector3(groundCheck.position.x, groundCheck.position.y, groundCheck.position.z + randomZ);
+        if(Physics.Raycast(walkPoint, -transform.up, 2f, whatIsGround))
             walkPointSet = true;
     }
 
@@ -85,8 +87,8 @@ abstract public class EnemyAI : MonoBehaviour
     {
         //Make sure enemy doesn't move
         agent.SetDestination(transform.position);
-
-        transform.LookAt(player);
+        Vector3 targetPos = new Vector3(player.position.x, transform.position.y, player.position.z);
+        transform.LookAt(targetPos);
 
         if (!alreadyAttacked)
         {
