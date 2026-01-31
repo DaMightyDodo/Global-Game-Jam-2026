@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1615379472335103395}
   m_Layer: 8
   m_Name: Cougher
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: SneezerStats
   m_EditorClassIdentifier: 
   sightRange: 20
-  attackRange: 5.85
+  attackRange: 5.11
   timeBetweenAttacks: 5
-  walkPointRange: 10
+  walkPointRange: 9.02

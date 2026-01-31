@@ -3,6 +3,7 @@ using UnityEngine.InputSystem;
 
 public class Shootingbase : MonoBehaviour
 {
+    [SerializeField] private SoundManager _sfx;
     [Header("ScriptableObjects")]
     [SerializeField] private SO_BulletStatistics _sobulletStatistics;
     [SerializeField] private SO_ShootCooldown _soShootCooldown;
@@ -103,6 +104,7 @@ public class Shootingbase : MonoBehaviour
 
         if (CanShoot)
         {
+            _sfx.PlaySFX("boom");
             CanShoot = false;
             timeRemaining = _soShootCooldown.cooldown;
             GameObject bullet = Instantiate(bulletPrefab, firepoint.position, rotatePoint.rotation);

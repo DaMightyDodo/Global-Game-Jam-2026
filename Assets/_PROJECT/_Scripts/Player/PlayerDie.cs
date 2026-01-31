@@ -4,7 +4,7 @@ using UnityEngine;
 public class PlayerDie : MonoBehaviour
 {
     public static event Action OnPlayerDie;
-
+    [SerializeField] private SoundManager _sfx;
     [Header("Debug")]
     [SerializeField] private GameObject _deadPlayerPrefab;
     [SerializeField] private PlayerController _playerController;
@@ -24,6 +24,8 @@ public class PlayerDie : MonoBehaviour
 
     private void Die()
     {
+        _sfx.PlaySFX("dieplayer");
+        _sfx.PlaySFX("gameover");
         if (_deadPlayerPrefab != null)
         {
             Instantiate(

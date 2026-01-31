@@ -4,6 +4,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
+    [SerializeField] private SoundManager _sfx;
     [Header("Animation")]
     [SerializeField] private Animator _animator;
 
@@ -100,6 +101,7 @@ public class PlayerController : MonoBehaviour
     {
         if (value.isPressed)
         {
+            _sfx.PlaySFX("jump");
             _jumpRequested = true;
             _lastJumpPressedTime = Time.time;
         }
