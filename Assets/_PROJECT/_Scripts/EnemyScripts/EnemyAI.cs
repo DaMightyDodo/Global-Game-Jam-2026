@@ -85,8 +85,6 @@ abstract public class EnemyAI : MonoBehaviour
 
     private void AttackPlayer()
     {
-        //Make sure enemy doesn't move
-        agent.SetDestination(transform.position);
         Vector3 targetPos = new Vector3(player.position.x, transform.position.y, player.position.z);
         transform.LookAt(targetPos);
 
