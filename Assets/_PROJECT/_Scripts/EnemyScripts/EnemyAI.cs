@@ -84,7 +84,7 @@ abstract public class EnemyAI : MonoBehaviour
         //Calculate random point in range
         float randomZ = Random.Range(-enemyStats.walkPointRange, enemyStats.walkPointRange);
         //float randomX = Random.Range(-enemyStats.walkPointRange, enemyStats.walkPointRange);
-        walkPoint = new Vector3(0, groundCheck.position.y, groundCheck.position.z + randomZ);
+        walkPoint = new Vector3(5, groundCheck.position.y, groundCheck.position.z + randomZ);
         if(Physics.Raycast(walkPoint, -transform.up, 2f, whatIsGround))
             walkPointSet = true;
     }
