@@ -46,7 +46,7 @@ public class Shootingbase : MonoBehaviour
         // mousePos = mainCam.ScreenToViewportPoint(Mouse.current.position.ReadValue());
         // Debug.Log(mousePos);
         MousePosition_and_Rotation();
-
+    
     }
 
     private void MousePosition_and_Rotation()
@@ -75,20 +75,26 @@ public class Shootingbase : MonoBehaviour
             }
         }    
     }
+
     private void OnLeftClick(InputAction.CallbackContext context)
     {
         //mousePos = context.ReadValue<Vector3>();
-        
+        if (!context.performed)
+        {
+            return;
+        }
+
         GameObject bullet = Instantiate(bulletPrefab, firepoint.position, rotatePoint.rotation);
-        
+
         Rigidbody rb = bullet.GetComponent<Rigidbody>();
-        
+
         //FAILSAFE
         if (rb != null)
         {
             // Vector3 direction = new Vector3(rotatePoint.forward.x, rotatePoint.forward.y, rotatePoint.forward.z);
-            
+
             rb.linearVelocity = rotatePoint.forward * so_bulletStatistics.speed;
         }
+
     }
 }
