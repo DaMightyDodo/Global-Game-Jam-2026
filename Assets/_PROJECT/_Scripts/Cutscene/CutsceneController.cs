@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 public class CutsceneController : MonoBehaviour
 {
     [SerializeField] private PlayableDirector director;
-    [SerializeField] private string gameplaySceneName = "MainGameplay Dodo";
+    [SerializeField] private string gameplaySceneName = "FinalGameplayScene";
 
     private void OnEnable()
     {
