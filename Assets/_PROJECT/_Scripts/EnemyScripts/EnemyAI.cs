@@ -57,6 +57,14 @@ abstract public class EnemyAI : MonoBehaviour
         }
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Mask"))
+        {
+            OnMasked();
+        }
+    }
+
     private void Patroling()
     {
         if (!walkPointSet) SearchWalkPoint();
@@ -107,8 +115,12 @@ abstract public class EnemyAI : MonoBehaviour
         alreadyAttacked = false;
     }
 
-    private void OnDestroy()
+    private void OnMasked()
     {
-        Destroy(gameObject);
+        GetComponent<EnemyAI>().enabled = false;
+
+        GetComponent<NavMeshAgent>().enabled = false;
+
+        GetComponent<Animator>().enabled = false;
     }
 }
