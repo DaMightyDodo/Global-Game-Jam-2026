@@ -4,18 +4,22 @@ using UnityEngine.InputSystem;
 public class Shootingbase : MonoBehaviour
 {
     [Header("ScriptableObjects")]
-    [SerializeField] private SO_BulletStatistics so_bulletStatistics;
+    [SerializeField] private SO_BulletStatistics _sobulletStatistics;
+    [SerializeField] private SO_ShootCooldown _soShootCooldown;
     
-    [SerializeField] private Camera mainCam;
-    [SerializeField] private Transform rotatePoint;
-    
-    private Vector3 mousePos;
-
     [Header("New Input System")] private InputSystem_Actions actions;
 
     [Header("Relating to Bullets (mask)")]
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private Transform firepoint;
+    
+    [Header("Shootingbase.cs local variables")]
+    [SerializeField] private Camera mainCam;
+    [SerializeField] private Transform rotatePoint;
+    private Vector3 mousePos;
+    private bool CanShoot;
+    private float timeRemaining;
+    
     void Awake()
     {
         actions = new InputSystem_Actions();
@@ -46,7 +50,14 @@ public class Shootingbase : MonoBehaviour
         // mousePos = mainCam.ScreenToViewportPoint(Mouse.current.position.ReadValue());
         // Debug.Log(mousePos);
         MousePosition_and_Rotation();
-    
+        if (!CanShoot)
+        {
+            timeRemaining -= Time.deltaTime;
+            if (timeRemaining <= 0.0f)
+            {
+                CanShoot = true;
+            }
+        }
     }
 
     private void MousePosition_and_Rotation()
@@ -84,17 +95,21 @@ public class Shootingbase : MonoBehaviour
             return;
         }
 
-        GameObject bullet = Instantiate(bulletPrefab, firepoint.position, rotatePoint.rotation);
-
-        Rigidbody rb = bullet.GetComponent<Rigidbody>();
-
-        //FAILSAFE
-        if (rb != null)
+        if (CanShoot)
         {
-            // Vector3 direction = new Vector3(rotatePoint.forward.x, rotatePoint.forward.y, rotatePoint.forward.z);
+            CanShoot = false;
+            timeRemaining = _soShootCooldown.cooldown;
+            GameObject bullet = Instantiate(bulletPrefab, firepoint.position, rotatePoint.rotation);
 
-            rb.linearVelocity = rotatePoint.forward * so_bulletStatistics.speed;
+            Rigidbody rb = bullet.GetComponent<Rigidbody>();
+
+            //FAILSAFE
+            if (rb != null)
+            {
+                // Vector3 direction = new Vector3(rotatePoint.forward.x, rotatePoint.forward.y, rotatePoint.forward.z);
+
+                rb.linearVelocity = rotatePoint.forward * _sobulletStatistics.speed;
+            }
         }
-
     }
 }

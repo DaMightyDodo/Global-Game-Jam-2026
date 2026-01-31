@@ -454,11 +454,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ddbcc96de065814a9da9102300c0d80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  so_bulletStatistics: {fileID: 11400000, guid: 7e22aaa43c1e62b4d9fb9c2427460876, type: 2}
-  mainCam: {fileID: 1598026751}
-  rotatePoint: {fileID: 1678444110}
+  _sobulletStatistics: {fileID: 11400000, guid: 7e22aaa43c1e62b4d9fb9c2427460876, type: 2}
+  _soShootCooldown: {fileID: 11400000, guid: 035005fba195f604cbe49d752d126d9f, type: 2}
   bulletPrefab: {fileID: 4598226924579752181, guid: ad1165d6dfe7dd3408383cb3efb07f52, type: 3}
   firepoint: {fileID: 955319262}
+  mainCam: {fileID: 1598026751}
+  rotatePoint: {fileID: 1678444110}
 --- !u!65 &955319264
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1139,6 +1140,10 @@ PrefabInstance:
     - target: {fileID: 4598226924579752181, guid: ad1165d6dfe7dd3408383cb3efb07f52, type: 3}
       propertyPath: m_Name
       value: Mask
+      objectReference: {fileID: 0}
+    - target: {fileID: 4598226924579752181, guid: ad1165d6dfe7dd3408383cb3efb07f52, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 5882912996607930534, guid: ad1165d6dfe7dd3408383cb3efb07f52, type: 3}
       propertyPath: m_LocalPosition.x
