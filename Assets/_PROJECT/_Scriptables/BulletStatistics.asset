@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 123e129627f91c54ea23b7799bb09ff5, type: 3}
   m_Name: BulletStatistics
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 20
