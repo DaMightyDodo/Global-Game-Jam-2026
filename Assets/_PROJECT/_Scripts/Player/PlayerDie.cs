@@ -9,16 +9,12 @@ public class PlayerDie : MonoBehaviour
     [SerializeField] private GameObject _deadPlayerPrefab;
     [SerializeField] private PlayerController _playerController;
 
-    private void OnEnable()
+    private void OnCollisionEnter(Collision collision)
     {
-        if (_playerController != null)
-            _playerController.OnInteractClicked += HandleDie;
-    }
-
-    private void OnDisable()
-    {
-        if (_playerController != null)
-            _playerController.OnInteractClicked -= HandleDie;
+        if (collision.gameObject.CompareTag("Enemy")||collision.gameObject.CompareTag("Germ"))
+        {
+            HandleDie();
+        }
     }
 
     private void HandleDie()
