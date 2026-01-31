@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 8931830454836549260}
   - component: {fileID: 7976525004357335964}
   - component: {fileID: 4066895902196141554}
+  - component: {fileID: 466969312486258266}
   m_Layer: 8
   m_Name: Sneezer
   m_TagString: Untagged
@@ -92,7 +93,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 80
+  m_Constraints: 82
   m_CollisionDetection: 0
 --- !u!195 &7976525004357335964
 NavMeshAgent:
@@ -143,6 +144,29 @@ MonoBehaviour:
   germ: {fileID: 5457477623235205665, guid: d543c69d29b7fe542a7a14d2435f176b, type: 3}
   GermsPerSneeze: 5
   SneezeSpread: 20
+--- !u!136 &466969312486258266
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4902057499400384547}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.6
+  m_Height: 5.5
+  m_Direction: 1
+  m_Center: {x: 0, y: -1, z: 0}
 --- !u!1001 &5589635690542059186
 PrefabInstance:
   m_ObjectHideFlags: 0
