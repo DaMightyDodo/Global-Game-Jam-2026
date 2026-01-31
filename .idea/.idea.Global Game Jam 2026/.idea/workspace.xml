@@ -5,11 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1dfbfa3c-a519-4c8a-a46c-e5f0f652a5ac" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Global Game Jam 2026/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Global Game Jam 2026/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_PROJECT/Scenes/MainGameplay Dodo.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_PROJECT/Scenes/MainGameplay Dodo.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_PROJECT/Scenes/StartScreen Test Dodo.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_PROJECT/Scenes/StartScreen Test Dodo.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_PROJECT/_Scripts/UI/PauseMenuButtons.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_PROJECT/_Scripts/UI/PauseMenuButtons.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_PROJECT/_Scripts/UI/PauseMenuManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_PROJECT/_Scripts/UI/PauseMenuManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_PROJECT/Prefabs/Cougher.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_PROJECT/Prefabs/Cougher.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_PROJECT/Prefabs/Germ.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_PROJECT/Prefabs/Germ.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_PROJECT/Prefabs/Sneezer.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_PROJECT/Prefabs/Sneezer.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_PROJECT/_Scripts/EnemyScripts/EnemyAI_Sneezer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_PROJECT/_Scripts/EnemyScripts/EnemyAI_Sneezer.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_PROJECT/_Scripts/EnemyScripts/EnemyProjectile.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_PROJECT/_Scripts/EnemyScripts/EnemyProjectile.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_PROJECT/_Scripts/EnemyScripts/ScriptableObjects/SneezerStats.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/_PROJECT/_Scripts/EnemyScripts/ScriptableObjects/SneezerStats.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_PROJECT/Prefabs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_PROJECT/Prefabs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_PROJECT/Scenes/TunaTest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_PROJECT/Scenes/TunaTest.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_PROJECT/_Scripts/EnemyScripts/EnemyAI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_PROJECT/_Scripts/EnemyScripts/EnemyAI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_PROJECT/_Scripts/EnemyScripts/EnemyAI_Cougher.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_PROJECT/_Scripts/EnemyScripts/EnemyAI_Cougher.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_PROJECT/_Scripts/EnemyScripts/ScriptableObjects/CougherStats.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_PROJECT/_Scripts/EnemyScripts/ScriptableObjects/CougherStats.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TimelineSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TimelineSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +65,7 @@
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "dodo-branch",
+    "git-widget-placeholder": "Merging backup-main__2",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
