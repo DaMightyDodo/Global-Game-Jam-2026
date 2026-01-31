@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class EnemyProjectile : MonoBehaviour
 {
-    public float lifetime = 3f;
+    public float lifetime = 2f;
     void Start()
     {
         // Destroy the projectile after its lifetime expires

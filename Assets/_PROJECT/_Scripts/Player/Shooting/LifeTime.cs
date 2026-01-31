@@ -6,7 +6,7 @@ public class LifeTime : MonoBehaviour
     /*
      * NOT A BIG PROJECT AND TO SAVE TIME, WE ARE NOT USING OBJECT POOLING YET.
      */
-    [SerializeField] private float lifeTime = 0.2f;
+    public float lifeTime = 2f;
     public Action OnTouchingEnemy;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -25,7 +25,7 @@ public class LifeTime : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         //Please specify more about tags and layer
-        OnTouchingEnemy?.Invoke();
+        //OnTouchingEnemy?.Invoke();
         Destroy(gameObject);
     }
 }
