@@ -70,7 +70,9 @@ public class Shootingbase : MonoBehaviour
 
         // 2. Create a plane that faces the camera at the player's position
         // This allows the mouse to "aim" up, down, left, and right relative to the screen.
-        Plane aimPlane = new Plane(-mainCam.transform.forward, transform.position);
+        //Plane aimPlane = new Plane(-mainCam.transform.forward, transform.position);
+        // Plane aligned with Y and Z axes (normal along X) 
+        Plane aimPlane = new Plane(Vector3.right, transform.position);
 
         //Check out Code Monkey's video (about minute 6:00) : https://www.youtube.com/watch?v=0jTPKz3ga4w
         if (aimPlane.Raycast(ray, out float distance))

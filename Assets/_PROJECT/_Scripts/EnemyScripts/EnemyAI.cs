@@ -120,7 +120,5 @@ abstract public class EnemyAI : MonoBehaviour
         GetComponent<EnemyAI>().enabled = false;
 
         GetComponent<NavMeshAgent>().enabled = false;
-
-        GetComponent<Animator>().enabled = false;
     }
 }
