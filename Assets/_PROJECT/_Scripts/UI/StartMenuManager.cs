@@ -1,5 +1,7 @@
 using System;
+using UnityEditor.SearchService;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class StartMenuManager : MonoBehaviour
 {
@@ -63,5 +65,6 @@ public class StartMenuManager : MonoBehaviour
     private void PlayTransitionCutscene()
     {
         Debug.Log("Play Transition");
+        SceneManager.LoadScene("MainGameplay Dodo");
     }
 }
