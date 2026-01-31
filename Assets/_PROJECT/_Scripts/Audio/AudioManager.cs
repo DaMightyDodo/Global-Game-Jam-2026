@@ -53,7 +53,7 @@ public class SoundManager : MonoBehaviour
     {
         if (musicSource == null || mainTheme == null)
             return;
-        musicSource.volume = PlayerPrefs.GetFloat("MusicVolume", 0.5f);
+        musicSource.volume = PlayerPrefs.GetFloat("MusicVolume", 0.1f);
         musicSource.clip = mainTheme;
         musicSource.loop = true;
         musicSource.Play();
