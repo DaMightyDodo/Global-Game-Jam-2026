@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 6515274033946074677}
   m_Layer: 0
   m_Name: CovidMask_Prefab
-  m_TagString: COVID_Mask
+  m_TagString: Mask
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
