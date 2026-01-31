@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1dfbfa3c-a519-4c8a-a46c-e5f0f652a5ac" name="Changes" comment="" />
+    <list default="true" id="1dfbfa3c-a519-4c8a-a46c-e5f0f652a5ac" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Global Game Jam 2026/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Global Game Jam 2026/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_PROJECT/_Scripts/UI/StartMenuManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_PROJECT/_Scripts/UI/StartMenuManager.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -27,7 +30,9 @@
 }</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/_PROJECT/InputSystem_Actions.inputactions" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_PROJECT/_Scripts/Camera/CameraManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_PROJECT/_Scripts/Player/PlayerScriptable.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_PROJECT/_Scripts/UI/StartMenuButtons.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8

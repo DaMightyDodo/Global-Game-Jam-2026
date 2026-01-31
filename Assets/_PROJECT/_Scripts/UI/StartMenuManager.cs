@@ -21,7 +21,7 @@ public class StartMenuManager : MonoBehaviour
 
     private void HandleStartClicked()
     {
-        SceneManager.LoadScene("GameScene");
+        SceneManager.LoadScene("MainGameplay Dodo");
     }
 
     private void HandleControlClicked()
