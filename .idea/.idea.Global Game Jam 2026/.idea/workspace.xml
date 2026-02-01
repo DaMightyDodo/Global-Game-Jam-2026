@@ -5,8 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1dfbfa3c-a519-4c8a-a46c-e5f0f652a5ac" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Global Game Jam 2026/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Global Game Jam 2026/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_PROJECT/_Scripts/Audio/AudioManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_PROJECT/_Scripts/Audio/AudioManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_PROJECT/_Scripts/Player/Shooting/Shootingbase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_PROJECT/_Scripts/Player/Shooting/Shootingbase.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

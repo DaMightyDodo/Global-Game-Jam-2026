@@ -105,7 +105,7 @@ public class Shootingbase : MonoBehaviour
 
         if (CanShoot)
         {
-            _sfx.PlaySFX("boom");
+            _sfx.PlaySFX("hit");
             CanShoot = false;
             timeRemaining = _soShootCooldown.cooldown;
             GameObject bullet = Instantiate(bulletPrefab, firepoint.position, rotatePoint.rotation);
