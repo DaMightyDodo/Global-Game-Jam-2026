@@ -86,7 +86,8 @@ public class Shootingbase : MonoBehaviour
 
             // 5. Point the rotatePoint at that position
             // This handles all axes (X, Y, and Z) automatically
-            Debug.Log(direction.magnitude);
+            
+            // Debug.Log(direction.magnitude);
             if (direction.magnitude > 2.4f)
             {
                 rotatePoint.rotation = Quaternion.LookRotation(direction);

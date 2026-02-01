@@ -3,8 +3,6 @@ using UnityEngine;
 
 public class SoundManager : MonoBehaviour
 {
-    public static SoundManager Instance { get; private set; }
-
     [Header("Music")]
     [SerializeField] private AudioSource musicSource;
     [SerializeField] private AudioClip mainTheme;
@@ -17,15 +15,6 @@ public class SoundManager : MonoBehaviour
 
     private void Awake()
     {
-        if (Instance != null && Instance != this)
-        {
-            Destroy(gameObject);
-            return;
-        }
-
-        Instance = this;
-        DontDestroyOnLoad(gameObject);
-
         BuildSfxLookup();
         PlayMainTheme();
     }
@@ -53,6 +42,7 @@ public class SoundManager : MonoBehaviour
     {
         if (musicSource == null || mainTheme == null)
             return;
+
         musicSource.volume = PlayerPrefs.GetFloat("MusicVolume", 0.1f);
         musicSource.clip = mainTheme;
         musicSource.loop = true;

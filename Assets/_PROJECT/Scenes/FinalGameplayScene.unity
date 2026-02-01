@@ -362,8 +362,76 @@ PrefabInstance:
       value: 1.23
       objectReference: {fileID: 0}
     - target: {fileID: 730196500527181220, guid: bc2addac4fa0b9446a90d4c03d855b67, type: 3}
+      propertyPath: sfxEntries.Array.data[0].maxVolume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 730196500527181220, guid: bc2addac4fa0b9446a90d4c03d855b67, type: 3}
+      propertyPath: sfxEntries.Array.data[0].minVolume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 730196500527181220, guid: bc2addac4fa0b9446a90d4c03d855b67, type: 3}
+      propertyPath: sfxEntries.Array.data[1].maxVolume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 730196500527181220, guid: bc2addac4fa0b9446a90d4c03d855b67, type: 3}
+      propertyPath: sfxEntries.Array.data[1].minVolume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 730196500527181220, guid: bc2addac4fa0b9446a90d4c03d855b67, type: 3}
+      propertyPath: sfxEntries.Array.data[2].maxVolume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 730196500527181220, guid: bc2addac4fa0b9446a90d4c03d855b67, type: 3}
+      propertyPath: sfxEntries.Array.data[2].minVolume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 730196500527181220, guid: bc2addac4fa0b9446a90d4c03d855b67, type: 3}
+      propertyPath: sfxEntries.Array.data[3].maxVolume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 730196500527181220, guid: bc2addac4fa0b9446a90d4c03d855b67, type: 3}
+      propertyPath: sfxEntries.Array.data[3].minVolume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 730196500527181220, guid: bc2addac4fa0b9446a90d4c03d855b67, type: 3}
+      propertyPath: sfxEntries.Array.data[4].maxVolume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 730196500527181220, guid: bc2addac4fa0b9446a90d4c03d855b67, type: 3}
+      propertyPath: sfxEntries.Array.data[4].minVolume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 730196500527181220, guid: bc2addac4fa0b9446a90d4c03d855b67, type: 3}
+      propertyPath: sfxEntries.Array.data[5].maxVolume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 730196500527181220, guid: bc2addac4fa0b9446a90d4c03d855b67, type: 3}
+      propertyPath: sfxEntries.Array.data[5].minVolume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 730196500527181220, guid: bc2addac4fa0b9446a90d4c03d855b67, type: 3}
+      propertyPath: sfxEntries.Array.data[6].maxVolume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 730196500527181220, guid: bc2addac4fa0b9446a90d4c03d855b67, type: 3}
+      propertyPath: sfxEntries.Array.data[6].minVolume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 730196500527181220, guid: bc2addac4fa0b9446a90d4c03d855b67, type: 3}
+      propertyPath: sfxEntries.Array.data[7].maxVolume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 730196500527181220, guid: bc2addac4fa0b9446a90d4c03d855b67, type: 3}
+      propertyPath: sfxEntries.Array.data[7].minVolume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 730196500527181220, guid: bc2addac4fa0b9446a90d4c03d855b67, type: 3}
       propertyPath: sfxEntries.Array.data[8].maxVolume
-      value: 0.132
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 730196500527181220, guid: bc2addac4fa0b9446a90d4c03d855b67, type: 3}
+      propertyPath: sfxEntries.Array.data[8].minVolume
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2779363503163301969, guid: bc2addac4fa0b9446a90d4c03d855b67, type: 3}
       propertyPath: m_Name
@@ -513,6 +581,10 @@ PrefabInstance:
     - target: {fileID: 2048169640020212755, guid: 87f1e0de6fc8cf1449253263e918fcb9, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2226026820088505877, guid: 87f1e0de6fc8cf1449253263e918fcb9, type: 3}
+      propertyPath: _startScreen
+      value: FinalStartMenu
       objectReference: {fileID: 0}
     - target: {fileID: 2495993484456888999, guid: 87f1e0de6fc8cf1449253263e918fcb9, type: 3}
       propertyPath: _sfx
